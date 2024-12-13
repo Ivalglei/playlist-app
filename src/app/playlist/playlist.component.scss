@@ -1,0 +1,41 @@
+h2 {
+  text-align: center;
+  color: #4CAF50;
+}
+
+
+input {
+  padding: 5px;
+  margin-right: 10px;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  padding: 8px;
+  margin: 5px;
+  background-color: #f1f1f1;
+  display: flex;
+  justify-content: space-between;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+  border-radius: 8px;
+}

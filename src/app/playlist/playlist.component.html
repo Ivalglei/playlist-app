@@ -1,0 +1,31 @@
+<div class="playlist-container">
+  <h2>Minha Playlist Favorita</h2>
+
+  <!-- Imagem da capa da playlist -->
+  <img src="assets/playlist-cover.jpg" alt="Imagem da Playlist" class="playlist-cover" />
+  <br />
+
+  <!-- Título para adicionar músicas -->
+  <h3>Adicione suas músicas:</h3>
+
+  <!-- Formulário para adicionar músicas -->
+  <div class="add-music-form">
+    <select [(ngModel)]="musicaNova" class="musica-select">
+      <option *ngFor="let opcao of opcoesMusicas" [value]="opcao">{{ opcao }}</option>
+    </select>
+    <button (click)="adicionarMusica(musicaNova)" class="btn-add">Adicionar</button>
+  </div>
+
+  <!-- Lista de músicas -->
+  <ul>
+    <li *ngFor="let musica of musicas; let i = index">
+      <button class="btn-play" (click)="selecionarMusica(musica)">Tocar</button>
+      <span>{{ musica }}</span>
+      <button class="btn-remove" (click)="removerMusica(i)">Remover</button>
+    </li>
+  </ul>
+  
+
+  <!-- Player de áudio -->
+  <audio #audioPlayer controls [src]="musicaAtual" (ended)="tocarProximaMusica()"></audio>
+</div>
